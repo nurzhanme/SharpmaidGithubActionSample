@@ -1,6 +1,6 @@
 # SharpmaidGithubActionSample
 
-![Build Status](https://github.com/nurzhanme/SharpmaidGithubActionSample/workflows/main.yml/badge.svg)
+![Build Status](https://github.com/nurzhanme/SharpmaidGithubActionSample/workflows/GenerateUML/badge.svg)
 
 **SharpmaidGithubActionSample** is a sample repository demonstrating the use [SharpmaidGithubAction](https://github.com/nurzhanme/SharpmaidGithubAction)
 
