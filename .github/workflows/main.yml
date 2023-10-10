@@ -1,0 +1,43 @@
+name: Generate UML.md
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+  
+jobs:
+  generate-uml:
+    runs-on: ubuntu-latest
+    name: Generate UML.md
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Upload File as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: ${{ github.workspace }}
+          retention-days: 1
+
+
+      - name: Sharpmaid
+        id: generate-UML
+        uses: nurzhanme/SharpmaidGithubAction@v0.0.2-alpha
+        with:
+          entity-path: SharpmaidGithubActionSample/Domain
+          uml-file: UML.md
+ 
+      - name: Commit UML.md changes.
+        id: commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "UML generated"
+          git push
+        shell: bash
