@@ -1,4 +1,4 @@
-name: Generate UML.md
+name: GenerateUML
 
 on:
   schedule:
