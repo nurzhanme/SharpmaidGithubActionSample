@@ -1,11 +1,11 @@
 ```mermaid
 classDiagram
-Animal  <|-- Cat
-class Cat{
-+Speak() string
-}
 Animal  <|-- Dog
 class Dog{
++Speak() string
+}
+Animal  <|-- Cat
+class Cat{
 +Speak() string
 }
 class Animal{
