@@ -4,14 +4,14 @@ Animal  <|-- Cat
 class Cat{
 +Speak() string
 }
+class Human{
++Name string
++Animals List<Animal>
+}
 class Animal{
 +Name string
 +Move() void
 +Speak() string
-}
-class Human{
-+Name string
-+Animals List<Animal>
 }
 Animal  <|-- Dog
 class Dog{
